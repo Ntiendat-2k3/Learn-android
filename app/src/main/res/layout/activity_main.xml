@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Trang Chủ"
+            app:titleTextColor="#FFFFFF" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="App Logo"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Upload"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Button to Select Image -->
+        <Button
+            android:id="@+id/button_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn Ảnh"
+            android:backgroundTint="#6200EE"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- EditText for Image URL -->
+        <EditText
+            android:id="@+id/edit_text_image_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập URL ảnh"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Button to Load Image from URL -->
+        <Button
+            android:id="@+id/button_load_image_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tải ảnh từ URL"
+            android:backgroundTint="#6200EE"
+            android:textColor="#fff"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- CardView to Show Image with 1/2 width and square shape -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/image_card_view">
+
+            <!-- ImageView with square size and centerCrop -->
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button to Upload Image -->
+        <Button
+            android:id="@+id/button_upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Ảnh"
+            android:backgroundTint="#6200EE"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Navigation Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/button_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:backgroundTint="#6200EE"
+                android:textColor="#fff"
+                android:layout_marginRight="8dp"/>
+
+            <Button
+                android:id="@+id/button_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:backgroundTint="#6200EE"
+                android:textColor="#fff"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
