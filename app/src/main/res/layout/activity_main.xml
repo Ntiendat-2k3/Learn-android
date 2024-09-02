@@ -86,13 +86,33 @@
             app:cardCornerRadius="8dp"
             android:id="@+id/image_card_view">
 
-            <!-- ImageView with square size and centerCrop -->
-            <ImageView
-                android:id="@+id/image_view"
+            <!-- FrameLayout to Overlay Button on Image -->
+            <FrameLayout
                 android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"/>
+                android:layout_height="200dp">
+
+                <!-- ImageView with square size and centerCrop -->
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"/>
+
+                <!-- Button to close image -->
+                <Button
+                    android:id="@+id/button_close_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top|end"
+                    android:text="X"
+                    android:textSize="20sp"
+                    android:background="@drawable/circle_button_background"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+            </FrameLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- Button to Upload Image -->
